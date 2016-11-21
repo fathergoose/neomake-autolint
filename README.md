@@ -49,6 +49,12 @@ disabled.
 First verify that [Neomake] is installed. Neomake Autolint depends on Neomake
 so if it is not installed Neomake Autolint will not work.
 
+Neomake Autolint needs to be installed as a plugin to Neomake. If Neomake was
+installed first, it may need to be uninstalled and reinstalled with Autolint. This
+is the case with vim-plug. Simply appending ` | Plug 'dojoteef/neomake-autolint' `
+to `Plug 'neomake/neomake'` and running `:PlugInstall` will **not** produce a working
+installation.
+
 Check if your version of vim supports jobs and timers. You can verify this by
 typing: `:echo has('nvim') || has('job') && has('timers')`
 
